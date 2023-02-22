@@ -11,7 +11,6 @@ if pgrep firefox >/dev/null 2>&1; then
 fi
 
 # Get the current version of Firefox
-#current=$(firefox -version | awk '/Mozilla Firefox/ {print $NF}' | cut -d '.' -f1)
 current=$(firefox -version | awk '/Mozilla Firefox/ {print $NF}')
 
 # Check for newer version of Firefox
