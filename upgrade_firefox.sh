@@ -34,5 +34,5 @@ sudo tar -C "$firefox_dir" -xvf firefox.tar.bz2 --strip-components=1
 # Remove the downloaded archive
 rm firefox.tar.bz2
 
-echo "$firefox_edition $(firefox --version) has been installed. Starting Firefox..."
+echo "$firefox_edition $current has been installed. Starting Firefox..."
 "$firefox_dir/firefox"
