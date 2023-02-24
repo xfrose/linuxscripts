@@ -26,7 +26,7 @@ fi
 
 # Download and extract newer version
 echo "Downloading $firefox_edition $latest..."
-curl --progress-bar --location "https://download.mozilla.org/\?product\=$firefox_edition-latest\&os\=linux64\&lang\=en-US" -o firefox.tar.bz2
+curl -L --progress-bar --location "https://download.mozilla.org/?product=$firefox_edition-latest&os=linux64&lang=en-US" -o firefox.tar.bz2
 
 echo "Extracting $firefox_edition $latest..."
 sudo tar -C "$firefox_dir" -xvf firefox.tar.bz2 --strip-components=1
@@ -34,5 +34,5 @@ sudo tar -C "$firefox_dir" -xvf firefox.tar.bz2 --strip-components=1
 # Remove the downloaded archive
 rm firefox.tar.bz2
 
-echo "$firefox_edition $latest has been installed. Starting Firefox..."
+echo "$firefox_edition $(firefox --version) has been installed. Starting Firefox..."
 "$firefox_dir/firefox"
